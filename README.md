@@ -17,6 +17,9 @@ It will grab ```python:3.9-alpine3.13``` image from docker hub, install all pyth
 from ```requirements.txt*``` and additionally set up Postgres container.
 
 # Usage
+Go to ```localhost:8000/admin``` to open Django admin panel.\
+Go to ```localhost:8000/api/docs``` to open Swagger automatic API documentation.
+
 
 
 ## Note
