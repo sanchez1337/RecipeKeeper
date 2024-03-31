@@ -2,6 +2,10 @@
 Following udemy course "Build a Backend REST API with Python Django - Advanced
 Will be trying to firstly follow the course and create an API, 
 then try to create a frontend with VueJS and hopefully using TDD with Cypress.
+Eventually what I would like of this to become would be some kind of 
+personal recipes repository, where eventually you could insert a link to some other
+recipe website - this app would be able to scrape it and present it in uniformed 
+form without additional clutter.
 
 My programming knowledge is still very limited so you are looking at the code at your own risk,
 but if you happen to see it and perhaps have any suggestions on how to improve it,
