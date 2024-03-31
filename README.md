@@ -35,3 +35,5 @@ Go to ```localhost:8000/api/docs``` to open Swagger automatic API documentation.
  Currently working on main branch - 
  I am aware this isn't really realistic scenario but want to start using 
  develop or feature branches when I will be sure I know what I am doing.
+ \
+I've made that repo public in hope this will force me write code more often.
