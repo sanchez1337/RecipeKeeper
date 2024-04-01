@@ -1,5 +1,5 @@
 FROM python:3.9-alpine3.13
-LABEL authors="sanchez31337"
+LABEL authors="sanchez1337"
 
 ENV PYTHONUNBUFFERED 1
 
