@@ -6,6 +6,9 @@ Eventually what I would like of this to become would be some kind of
 personal recipes repository, where eventually you could insert a link to 
 some other recipe website - this app would be able to scrape it 
 and present it in uniformed form without any clutter.
+Additional functionality which will try to implement as I go:
+- saving ingredients used by user - possibly with pictures and price
+- adding notes to the recipe
 
 My programming knowledge is still very limited, so you are looking at
 the code at your own risk, but if you happen to see it and perhaps
