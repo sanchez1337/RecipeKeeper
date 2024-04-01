@@ -14,7 +14,9 @@ My programming knowledge is still very limited, so you are looking at
 the code at your own risk, but if you happen to see it and perhaps
 have any suggestions on how to improve it,
 please let me know - I will very much appreciate it!
-
+<br><br>
+#TODO: Installation - will contain final deployment steps, this one has to go to 
+section called Development(?)
 # Installation
 I will contain that whole project with a docker image so for now all you 
 have to do
