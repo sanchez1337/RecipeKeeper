@@ -18,13 +18,14 @@ please let me know - I will very much appreciate it!
 #TODO: Installation - will contain final deployment steps, this one has to go to 
 section called Development(?)
 # Installation
-I will contain that whole project with a docker image so for now all you 
-have to do
-is run:
+
+Copy ```.env.sample``` to ```.env``` and update the values with your secure passwords.
+
+THen all you have to do is run:
 ```bash
 docker compose build
 ```
-It will grab ```python:3.9-alpine3.13``` image from docker hub, install 
+It will grab ```python:3.11.9-alpine3.19``` image from docker hub, install 
 all python packages
 from ```requirements.txt*``` and additionally set up Postgres container.
 
@@ -61,5 +62,5 @@ Go to ```localhost:8000/api/docs``` to open Swagger automatic API documentation.
  \
 I've made that repo public in hope this will force me write code more often.
 
-04-04-2024: Upgraded to django 4
+04-04-2024: Upgraded to django 4\
 04-04-2024: Upgraded to django 5
