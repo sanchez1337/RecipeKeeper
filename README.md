@@ -62,3 +62,4 @@ Go to ```localhost:8000/api/docs``` to open Swagger automatic API documentation.
 I've made that repo public in hope this will force me write code more often.
 
 04-04-2024: Upgraded to django 4
+04-04-2024: Upgraded to django 5
