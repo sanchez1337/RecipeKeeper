@@ -1,5 +1,5 @@
 services:
-  app:
+  backend:
     build:
       context: .
     restart: always
@@ -31,7 +31,7 @@ services:
       context: ./proxy
     restart: always
     depends_on:
-      - app
+      - backend
     ports:
       - 80:8000
     volumes:

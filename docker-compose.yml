@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  app:
+  backend:
     build:
       context: .
       args:
@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./app:/app
+      - ./backend:/backend
       - dev-static-data:/vol/web
     command: >
       sh -c "python manage.py wait_for_db &&
