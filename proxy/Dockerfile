@@ -12,6 +12,9 @@ USER root
 
 RUN apk add --no-cache openssl bash &&\
     chown nginx:nginx /etc/nginx/conf.d/default.conf && \
+    chown nginx:nginx /vol/proxy/ssl-dhparams.pem && \
+    chown nginx:nginx /etc/nginx/default.conf.tpl && \
+    chwon nginx:nginx /etc/nginx/default-ssl.conf.tpl && \
     chmod +x /run.sh
 
 VOLUME /vol/static
