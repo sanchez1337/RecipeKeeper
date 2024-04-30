@@ -1,23 +1,21 @@
-FROM nginxinc/nginx-unprivileged:alpine3.18
+FROM nginxinc/nginx-unprivileged:1.25-alpine
 LABEL maintainer="sanchez1337"
 
-COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
-COPY ./uwsgi_params /etc/nginx/uwsgi_params
+COPY ./nginx/* /etc/nginx
 COPY ./run.sh /run.sh
 
-ENV LISTEN_PORT=8000
 ENV APP_HOST=backend
 ENV APP_PORT=9000
 
 USER root
 
-RUN mkdir -p /vol/static && \
-    chmod 755 /vol/static && \
-    touch /etc/nginx/conf.d/default.conf && \
+
+RUN apk add --no-cache openssl bash &&\
     chown nginx:nginx /etc/nginx/conf.d/default.conf && \
     chmod +x /run.sh
 
 VOLUME /vol/static
+VOLUME /vol/www
 
 USER nginx
 
