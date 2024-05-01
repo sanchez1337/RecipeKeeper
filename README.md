@@ -17,6 +17,8 @@ please let me know - I will very much appreciate it!
 <br><br>
 #TODO: Installation - will contain final deployment steps, this one has to go to 
 section called Development(?)
+
+
 # Installation
 
 Copy ```.env.sample``` to ```.env``` and update the values with your secure passwords.
@@ -47,7 +49,10 @@ docker compose logs -f
 Go to ```localhost:8000/admin``` to open Django admin panel.\
 Go to ```localhost:8000/api/docs``` to open Swagger automatic API documentation.
 
-
+## Demo 
+Wanted to try out some deployment strategies so for the time being
+project is up and running on AWS EC2 Instance under domain
+[https://recipe.sancholabs.com](https://recipe.sancholabs.com)
 
 ## Note
  Please note, I also have no idea yet how to write a proper README file,
