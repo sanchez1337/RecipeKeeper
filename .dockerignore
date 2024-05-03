@@ -6,10 +6,14 @@
 .docker
 
 # Python
-app/__pycache__/
-app/*/__pycache__/
-app/*/*/__pycache__/
-app/*/*/*/__pycache__/
+backend/app/__pycache__/
+backend/app/*/__pycache__/
+backend/app/*/*/__pycache__/
+backend/app/*/*/*/__pycache__/
 .env/
 .venv/
 venv/
+
+# Vue
+frontend/app/node_modules/
+frontend/app/dist/
