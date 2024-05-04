@@ -2,6 +2,8 @@ services:
   backend:
     build:
       context: ./backend
+      args:
+        DEPLOYMENT_MODE: "production"
     restart: always
     volumes:
       - static-data:/vol/web
