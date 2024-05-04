@@ -7,7 +7,8 @@ RUN npm install
 COPY . .
 EXPOSE 3000
 # Environment variable to control the mode ("development" or "production")
-ARG MODE
+ARG DEPLOYMENT_MODE
+ENV DEPLOYMENT_MODE=$DEPLOYMENT_MODE
 
 # Use an entrypoint script to decide which command to run
 COPY scripts/docker-entrypoint.sh /usr/local/bin/

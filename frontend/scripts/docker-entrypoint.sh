@@ -2,11 +2,21 @@
 
 set -e
 
-if [ "$MODE" = "production" ]; then
-  echo "Running in production mode..."
-  npm run build
-  npm start # Assuming you have a server like serve or a similar static file server
+# First check if the first argument passed in looks like a flag (-f, --flag, etc.)
+# or if no arguments are passed in.
+if [ "${1#-}" != "$1" ] || [ -z "$1" ]; then
+  if [ "$DEPLOYMENT_MODE" = "production" ]; then
+    echo "Running in production mode..."
+    npm run build
+  elif [ "$DEPLOYMENT_MODE" = "development" ]; then
+    echo "Running in development mode..."
+    npm run dev -- --host
+  else
+    echo "No deployment mode specified or mode is not supported. Exiting."
+    exit 1
+  fi
 else
-  echo "Running in development mode..."
-  npm run dev -- --host
+  # If it looks like the first argument is not a flag
+  # and not empty, assume it's a command to execute
+  exec "$@"
 fi

@@ -18,7 +18,7 @@ if [ "${1#-}" != "$1" ] || [ -z "$1" ]; then
     python manage.py migrate &&
     python manage.py runserver 0.0.0.0:8000
   else
-    echo "No mode specified or mode is not supported. Exiting."
+    echo "No deployment mode specified or mode is not supported. Exiting."
     exit 1
   fi
 else
