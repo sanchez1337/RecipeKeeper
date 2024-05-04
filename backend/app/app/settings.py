@@ -26,9 +26,7 @@ DEBUG = bool(int(os.environ.get('DEBUG', 0)))
 
 ALLOWED_HOSTS = [] if DEBUG else os.environ.get('ALLOWED_HOSTS', '').split(',')
 
-# CSRF_TRUSTED_ORIGINS = [] if DEBUG else os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',')
-
-# TODO have to check how to resolve it so it's compatible with dev and production environment
+CSRF_TRUSTED_ORIGINS = [] if DEBUG else os.environ.get('CSRF_TRUSTED_ORIGINS', '').split(',')
 
 # Application definition
 
