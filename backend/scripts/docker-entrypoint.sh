@@ -14,8 +14,8 @@ if [ "${1#-}" != "$1" ] || [ -z "$1" ]; then
     uwsgi --socket :9000 --workers 4 --master --enable-threads --module app.wsgi
   elif [ "$DEPLOYMENT_MODE" = "development" ]; then
     echo "Running in development mode..."
-    python manage.py wait_for_db &&
-    python manage.py migrate &&
+    python manage.py wait_for_db
+    python manage.py migrate
     python manage.py runserver 0.0.0.0:8000
   else
     echo "No deployment mode specified or mode is not supported. Exiting."

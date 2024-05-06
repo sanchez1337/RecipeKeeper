@@ -29,6 +29,17 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
 
+  frontend:
+      build:
+        context: ./frontend
+        args:
+          DEPLOYMENT_MODE: "development"
+      ports:
+        - "5173:5173"
+      volumes:
+        - ./frontend/app:/app
+        - /app/node_modules
+
 volumes:
     dev-db-data:
     dev-static-data:

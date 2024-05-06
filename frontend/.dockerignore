@@ -1,0 +1,10 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.docker
+
+
+# Vue
+app/node_modules

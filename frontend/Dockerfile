@@ -2,10 +2,10 @@ FROM node:22-alpine3.19
 LABEL authors="sanchez1337"
 
 WORKDIR /app
-COPY package*.json ./
+COPY app/package*.json ./
 RUN npm install
-COPY . .
-EXPOSE 3000
+COPY app .
+EXPOSE 5173
 # Environment variable to control the mode ("development" or "production")
 ARG DEPLOYMENT_MODE
 ENV DEPLOYMENT_MODE=$DEPLOYMENT_MODE
