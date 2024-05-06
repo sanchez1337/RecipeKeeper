@@ -4,8 +4,9 @@ LABEL authors="sanchez1337"
 WORKDIR /app
 COPY app/package*.json ./
 RUN npm install
-COPY app .
+COPY app/ .
 EXPOSE 5173
+
 # Environment variable to control the mode ("development" or "production")
 ARG DEPLOYMENT_MODE
 ENV DEPLOYMENT_MODE=$DEPLOYMENT_MODE

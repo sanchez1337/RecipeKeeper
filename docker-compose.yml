@@ -34,11 +34,12 @@ services:
         context: ./frontend
         args:
           DEPLOYMENT_MODE: "development"
+      environment:
+        - NODE_ENV=development
       ports:
         - "5173:5173"
       volumes:
         - ./frontend/app:/app
-        - /app/node_modules
 
 volumes:
     dev-db-data:
