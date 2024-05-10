@@ -9,6 +9,7 @@ cd /app
 if [ "${1#-}" != "$1" ] || [ -z "$1" ]; then
   if [ "$DEPLOYMENT_MODE" = "production" ]; then
     echo "Running in production mode..."
+    npm install
     npm run build
   elif [ "$DEPLOYMENT_MODE" = "development" ]; then
     echo "Running in development mode..."
