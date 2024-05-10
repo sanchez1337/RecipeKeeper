@@ -16,7 +16,6 @@ if [ "${1#-}" != "$1" ] || [ -z "$1" ]; then
     npm run dev -- --host
   else
     echo "No deployment mode specified or mode is not supported. Exiting."
-
     exit 1
   fi
 else
